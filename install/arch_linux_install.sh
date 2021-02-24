@@ -104,7 +104,8 @@ useradd -m ${USER_NAME}
 #echo ${USER_PASSWORD} | passwd --stdin ${USER_NAME}
 echo ${USER_NAME}:${USER_PASSWORD} | chpasswd
 
-echo "export TERM=xterm-256color" >> /home/${USER_NAME}
+# echo "export TERM=xterm-256color" >> /home/${USER_NAME}
+echo "LANG=en_US.UTF-8" > /etc/locale.conf 
 
 bootctl install
 
