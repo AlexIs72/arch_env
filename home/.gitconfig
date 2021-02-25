@@ -1,0 +1,26 @@
+[user]
+	name = user
+	email = user@domain
+
+[color] 
+    branch = auto 
+    diff = auto 
+    interactive = auto 
+    status = auto 
+    ui = auto 
+
+[alias]
+    ch = checkout
+    poff = config --global core.pager \"\"
+    pon = config --global core.pager \"less\"
+    lgp = !git pon && git log --all --graph --decorate \
+    '--pretty=tformat:%Cblue%h%Creset %s %Cred%d%Creset' && git poff
+    lgt = !git pon && git log --all --graph --simplify-by-decoration \
+    '--pretty=tformat:%Cblue%h%Creset %s %Cred%d%Creset' && git poff
+    fp = format-patch -k -1 HEAD --stdout
+    fpr = format-patch -k --stdout
+    fpa = format-patch -k -o patches --root
+    df = !git pon && git diff
+    
+[core]
+	pager = 

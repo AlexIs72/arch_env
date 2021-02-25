@@ -38,6 +38,9 @@ imap <Insert> <Nop>
 " Misc {{{
 set backspace=indent,eol,start
 set clipboard=unnamed
+" Disable annoying beeping
+set noerrorbells
+set vb t_vb=
 " }}}
 
 " Wiki {{{
@@ -231,3 +234,6 @@ autocmd filetype c,cpp set cin  " Расставлять отступы в ст�
 autocmd filetype make set noexpandtab   " В make-файлах нам не нужно заменять табуляцию пробелами
 autocmd filetype make set nocin
 " }}}
+
+
+
