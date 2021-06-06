@@ -126,6 +126,7 @@ BLE_EF
 
 systemctl enable dhcpcd
 systemctl enable sshd
+systemctl enable systemd-timesyncd
 
 ln -s /usr/share/zoneinfo/Asia/${TIMEZONE} /etc/localtime
 
