@@ -11,7 +11,7 @@ BOOT_PART_LABEL=EFI
 ROOT_PART_SIZE="100%"
 ROOT_PART_LABEL="ArchLinux"
 
-TIMEZONE="Novosiborsk"
+TIMEZONE="Novosibirsk"
 HOSTNAME="archlinux-host"
 
 USE_EFI=0
