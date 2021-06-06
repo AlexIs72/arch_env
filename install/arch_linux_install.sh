@@ -124,6 +124,9 @@ initrd /initramfs-linux.img
 options root=${rootfs_uuid} rw
 BLE_EF
 
+echo 'NTP=0.ru.pool.ntp.org 1.ru.pool.ntp.org 2.ru.pool.ntp.org 3.ru.pool.ntp.org' >> /etc/systemd/timesyncd.conf
+
+
 systemctl enable dhcpcd
 systemctl enable sshd
 systemctl enable systemd-timesyncd
