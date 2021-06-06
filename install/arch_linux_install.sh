@@ -78,7 +78,8 @@ reflector -c Russia > /etc/pacman.d/mirrorlist
     sudo \
     dhcpcd \
     openssh \
-    intel-ucode
+    intel-ucode \
+    usbutils
 
 #-----------------------
 # Tune
