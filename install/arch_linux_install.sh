@@ -24,7 +24,9 @@ fi
 # TODO
 # - script's arguments
 # - init wifi if need
-
+# - remove all partitions
+# - fix for non-efi systems
+# - remove using of initramfs 
 
 #-----------------------
 # Remove old partitions
@@ -40,7 +42,7 @@ fi
 
 /usr/bin/parted -s ${INSTALL_DEV} \
 	mklabel ${PART_TYPE} \
-	mkpart EFI fat32 0% ${BOOT_PART_SIZE} \
+	mkpart EFI fat32 1M ${BOOT_PART_SIZE} \
 	set 1 esp on \
 	mkpart root_fs ext4 ${BOOT_PART_SIZE} ${ROOT_PART_SIZE} \
 	align-check optimal 1 \
