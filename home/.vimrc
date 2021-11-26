@@ -7,7 +7,7 @@ set exrc            " Позволим конфигурационным файл
                     " Включим чтение конфигурационных файлов .vimrc в текущей директории
 set secure          " Запретим опасные команды в локальных .vimrc файлах (эта опция должна идти в вашем
                     " ~/.vimrc после запрещаемых команд, таких как write)
-set cm=blowfish2
+" set cm=blowfish2
 set viminfo=
 set nobackup
 set nowritebackup
@@ -16,9 +16,50 @@ set nowritebackup
 " Editor {{{
 set ff=unix         " Auto EOL conversion
 set fileencoding=utf-8
-set tags=./tags
+" set tags=./tags
 set autoread 
 " }}}
+
+" Vim Plug {{{
+" source  ~/.vim/plugged/matchit.vim
+call plug#begin('~/.vim/plugged')
+Plug 'arcticicestudio/nord-vim'
+Plug 'jceb/vim-orgmode'
+" Plug 'dhruvasagar/vim-dotoo'
+Plug 'tpope/vim-speeddating'
+" Plug 'mattn/calendar-vim'
+Plug 'tibabit/vim-templates'
+" Plug 'peterhoeg/vim-qml'
+" Plug 'tpope/vim-commentary'
+" Plug 'tomtom/tcomment_vim'
+" Plug 'bling/vim-airline'
+" Plug 'derekwyatt/vim-scala'
+" Plug 'elixir-editors/vim-elixir'
+" Plug 'fatih/vim-go'
+" Plug 'janko-m/vim-test'
+" Plug 'keith/swift.vim'
+" Plug 'kien/ctrlp.vim'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'moll/vim-node'
+" Plug 'scrooloose/syntastic'
+" Plug 'simnalamburt/vim-mundo'
+" Plug 'tpope/vim-abolish'
+" Plug 'tpope/vim-fugitive'
+" Plug 'vim-airline/vim-airline-themes'
+" Plug 'vimwiki/vimwiki'
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plug 'michaeljsmith/vim-indent-object'
+" https://github.com/Yggdroot/indentLine
+" https://github.com/zaiste/tmux.vim
+" https://github.com/benmills/vimux
+" Plug 'preservim/nerdcommenter'
+" Plug 'preservim/nerdtree'
+" Plug 'godlygeek/tabular'
+" Plug 'plasticboy/vim-markdown'
+" Plug 'gabrielelana/vim-markdown'
+call plug#end()
+" }}}
+
 
 " Colors {{{
 syntax enable           " enable syntax processing
@@ -27,6 +68,7 @@ syntax enable           " enable syntax processing
 " let g:solarized_termcolors=256
 " colorscheme solarized
 " colorscheme gruvbox
+colorscheme nord
 " set termguicolors
 set t_Co=256
 " }}}
@@ -37,7 +79,7 @@ imap <Insert> <Nop>
 
 " Misc {{{
 set backspace=indent,eol,start
-set clipboard=unnamed
+set clipboard+=unnamedplus
 " Disable annoying beeping
 set noerrorbells
 set vb t_vb=
@@ -176,43 +218,6 @@ set foldlevelstart=10   " start with fold level of 1
 " augroup END
 " }}}
 
-" Vim Plug {{{
-" source  ~/.vim/plugged/matchit.vim
-call plug#begin('~/.vim/plugged')
-" Plug 'jceb/vim-orgmode'
-Plug 'tpope/vim-speeddating'
-Plug 'mattn/calendar-vim'
-Plug 'tibabit/vim-templates'
-Plug 'peterhoeg/vim-qml'
-" Plug 'tpope/vim-commentary'
-" Plug 'tomtom/tcomment_vim'
-" Plug 'bling/vim-airline'
-" Plug 'derekwyatt/vim-scala'
-" Plug 'elixir-editors/vim-elixir'
-" Plug 'fatih/vim-go'
-" Plug 'janko-m/vim-test'
-" Plug 'keith/swift.vim'
-Plug 'kien/ctrlp.vim'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'moll/vim-node'
-" Plug 'scrooloose/syntastic'
-" Plug 'simnalamburt/vim-mundo'
-" Plug 'tpope/vim-abolish'
-" Plug 'tpope/vim-fugitive'
-" Plug 'vim-airline/vim-airline-themes'
-Plug 'vimwiki/vimwiki'
-" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-" Plug 'michaeljsmith/vim-indent-object'
-" https://github.com/Yggdroot/indentLine
-" https://github.com/zaiste/tmux.vim
-" https://github.com/benmills/vimux
-Plug 'preservim/nerdcommenter'
-" Plug 'preservim/nerdtree'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-" Plug 'gabrielelana/vim-markdown'
-call plug#end()
-" }}}
 
 " netrw {{{
 " let g:netrw_banner = 0
