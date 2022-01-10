@@ -13,6 +13,8 @@ return require('packer').startup(function()
 
     -- Цветовая схема
 --    use 'joshdick/onedark.vim'
+--    use 'mhartington/oceanic-next'
+--    https://causlayer.orgs.hk/roflolilolmao/oceanic-next.nvim
     use 'arcticicestudio/nord-vim'
     --- Информационная строка внизу
     use { 'nvim-lualine/lualine.nvim',
@@ -41,7 +43,6 @@ return require('packer').startup(function()
         requires = { {'nvim-lua/plenary.nvim'} },
         config = function() require'telescope'.setup {} 
     end, }
-
 
     -----------------------------------------------------------
     -- LSP и автодополнялка

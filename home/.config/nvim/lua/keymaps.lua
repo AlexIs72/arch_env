@@ -3,6 +3,7 @@ local default_opts = {noremap = true, silent = true}
 
 -- https://habr.com/ru/post/586808/
 
+map('n', '<Insert>', '<Nop>', default_opts)
 
 -- fzf
 map('n', '<C-a>', [[ <cmd>lua require('telescope.builtin').find_files()<cr> ]], default_opts)

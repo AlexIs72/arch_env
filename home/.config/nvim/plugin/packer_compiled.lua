@@ -116,6 +116,12 @@ _G.packer_plugins = {
     path = "/home/alexey/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["headlines.nvim"] = {
+    config = { "\27LJ\1\0027\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\14headlines\frequire\0" },
+    loaded = true,
+    path = "/home/alexey/.local/share/nvim/site/pack/packer/start/headlines.nvim",
+    url = "https://github.com/lukas-reineke/headlines.nvim"
+  },
   ["lexima.vim"] = {
     loaded = true,
     path = "/home/alexey/.local/share/nvim/site/pack/packer/start/lexima.vim",
@@ -162,6 +168,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alexey/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["org-bullets.nvim"] = {
+    config = { "\27LJ\1\0020\0\1\4\0\3\0\0064\1\0\0007\1\1\1\16\2\0\0%\3\2\0>\1\3\1H\0\2\0\b♥\vinsert\ntableQ\1\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\4\0001\2\3\0:\2\5\1>\0\2\1G\0\1\0\fsymbols\1\0\0\0\nsetup\16org-bullets\frequire\0" },
+    loaded = true,
+    path = "/home/alexey/.local/share/nvim/site/pack/packer/start/org-bullets.nvim",
+    url = "https://github.com/akinsho/org-bullets.nvim"
   },
   orgmode = {
     config = { "\27LJ\1\0029\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\forgmode\frequire\0" },
@@ -240,6 +252,11 @@ _G.packer_plugins = {
     path = "/home/alexey/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
+  ["vim-table-mode"] = {
+    loaded = true,
+    path = "/home/alexey/.local/share/nvim/site/pack/packer/start/vim-table-mode",
+    url = "https://github.com/dhruvasagar/vim-table-mode"
+  },
   ["vim-unimpaired"] = {
     loaded = true,
     path = "/home/alexey/.local/share/nvim/site/pack/packer/start/vim-unimpaired",
@@ -272,6 +289,14 @@ time([[Config for bufferline.nvim]], false)
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\1\0025\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: headlines.nvim
+time([[Config for headlines.nvim]], true)
+try_loadstring("\27LJ\1\0027\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\14headlines\frequire\0", "config", "headlines.nvim")
+time([[Config for headlines.nvim]], false)
+-- Config for: org-bullets.nvim
+time([[Config for org-bullets.nvim]], true)
+try_loadstring("\27LJ\1\0020\0\1\4\0\3\0\0064\1\0\0007\1\1\1\16\2\0\0%\3\2\0>\1\3\1H\0\2\0\b♥\vinsert\ntableQ\1\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\4\0001\2\3\0:\2\5\1>\0\2\1G\0\1\0\fsymbols\1\0\0\0\nsetup\16org-bullets\frequire\0", "config", "org-bullets.nvim")
+time([[Config for org-bullets.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
